@@ -29,19 +29,22 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/r1c1">
+            android:id="@+id/r1c1"
+            android:background="@drawable/boxes">
         </ImageView>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/r1c2">
+            android:id="@+id/r1c2"
+            android:background="@drawable/boxes">
         </ImageView>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/r1c3">
+            android:id="@+id/r1c3"
+            android:background="@drawable/boxes">
         </ImageView>
     </LinearLayout>
     <LinearLayout
@@ -54,19 +57,22 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/r2c1">
+            android:id="@+id/r2c1"
+            android:background="@drawable/boxes">
         </ImageView>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/r2c2">
+            android:id="@+id/r2c2"
+            android:background="@drawable/boxes">
         </ImageView>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/r2c3">
+            android:id="@+id/r2c3"
+            android:background="@drawable/boxes">
         </ImageView>
     </LinearLayout>
     <LinearLayout
@@ -79,19 +85,22 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/r3c1">
+            android:id="@+id/r3c1"
+            android:background="@drawable/boxes">
         </ImageView>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/r3c2">
+            android:id="@+id/r3c2"
+            android:background="@drawable/boxes">
         </ImageView>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/r3c3">
+            android:id="@+id/r3c3"
+            android:background="@drawable/boxes">
         </ImageView>
     </LinearLayout>
 </LinearLayout>
