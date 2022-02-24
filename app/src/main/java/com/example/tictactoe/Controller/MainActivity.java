@@ -35,21 +35,29 @@ public class MainActivity extends AppCompatActivity {
         tvPlayer.setText(R.string.player_1);
 
         //TODO: como sabemos que player está jugando y le metemos el dibujo
+        //@Fao Exemple amb el punt
 
         r1c1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Casilla casilla11 = tablero.getCasillaById(1);
                 if(casilla11.isEmpty()) {
-                    //Podemos rellenarla por el player
+                    casilla11.getImageView().setImageResource(R.drawable.dot);
+                    casilla11.fill();
                 }
             }
         });
+
+        //@Fao Exemple amb la creu
 
         r1c2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Casilla casilla12 = tablero.getCasillaById(2);
+                if(casilla12.isEmpty()) {
+                    casilla12.getImageView().setImageResource(R.drawable.cross);
+                    casilla12.fill();
+                }
             }
         });
 
@@ -101,8 +109,5 @@ public class MainActivity extends AppCompatActivity {
                 Casilla casilla33 = tablero.getCasillaById(9);
             }
         });
-
-
-
     }
 }

@@ -26,8 +26,8 @@ public class Casilla {
         return imageView;
     }
 
-    public void setEmpty(boolean empty) {
-        isEmpty = empty;
+    public void fill() {
+        isEmpty = false;
     }
 
     public void setPlayer(int player) {

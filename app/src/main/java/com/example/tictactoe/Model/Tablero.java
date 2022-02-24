@@ -5,7 +5,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 public class Tablero {
-    ArrayList<Casilla> tablero;
+    ArrayList<Casilla> tablero = new ArrayList<>();
 
     public Tablero(ImageView r1c1, ImageView r1c2, ImageView r1c3, ImageView r2c1, ImageView r2c2, ImageView r2c3,
                    ImageView r3c1, ImageView r3c2, ImageView r3c3) {
@@ -21,6 +21,6 @@ public class Tablero {
     }
 
     public Casilla getCasillaById(int id) {
-        return tablero.get(id+1);
+        return tablero.get(id-1);
     }
 }
