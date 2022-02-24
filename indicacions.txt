@@ -1,0 +1,17 @@
+S'obre directament el joc, no hi han mes pantalles. 
+Cuadricula de 9 posiciones
+Es va mostrant Player 1 / Player 2
+
+Poder mirar qui ha guanyat i mostrarho amb un toast
+Per reiniciar, s'ha de tancar l'app.
+
+Color corporatiu: verd
+
+1. Es renderitza la quadricula
+2. Es canvia el forat buit per un cercle
+3. Es canvia el forat per una creu
+...
+X. 
+
+LinearLayout
+FrameLayout
