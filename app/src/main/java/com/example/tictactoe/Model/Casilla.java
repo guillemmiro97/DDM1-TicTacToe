@@ -7,11 +7,17 @@ public class Casilla {
     private boolean isEmpty;
     private int player;
     private final ImageView imageView;
+    private int rowNumber;
+    private int colNumber;
 
-    public Casilla(int id, ImageView imageView) {
+
+    public Casilla(int id, ImageView imageView, int rowNumber, int colNumber) {
         this.id = id;
         this.isEmpty = true;
+        this.player = 0;
         this.imageView = imageView;
+        this.rowNumber = rowNumber;
+        this.colNumber = colNumber;
     }
 
     public boolean isEmpty() {
@@ -24,6 +30,14 @@ public class Casilla {
 
     public ImageView getImageView() {
         return imageView;
+    }
+
+    public int getRowNumber() {
+        return rowNumber;
+    }
+
+    public int getColNumber() {
+        return colNumber;
     }
 
     public void fill() {
