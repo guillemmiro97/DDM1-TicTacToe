@@ -14,6 +14,8 @@ import com.example.tictactoe.R;
 
 public class MainActivity extends AppCompatActivity {
     final int[] player = {1};
+    private int casillasOcupadas = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
         ImageView r3c1 = findViewById(R.id.r3c1);
         ImageView r3c2 = findViewById(R.id.r3c2);
         ImageView r3c3 = findViewById(R.id.r3c3);
-
-
-
 
         Tablero tablero = new Tablero(r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3);
 
@@ -48,11 +47,18 @@ public class MainActivity extends AppCompatActivity {
                     if (player[0] == 1){
                         casilla11.getImageView().setImageResource(R.drawable.dot);
                         casilla11.fill();
+                        casilla11.setPlayer(player[0]);
+                        if (tablero.checkGameWon(player[0])) {
+                            Toast.makeText(getApplicationContext(),R.string.player1_win,Toast.LENGTH_SHORT).show();
+                        }
                     } else if (player[0] == 2){
                         casilla11.getImageView().setImageResource(R.drawable.cross);
                         casilla11.fill();
                     }
+
                     player[0] = setPlayer(player[0],tvPlayer);
+                    casillasOcupadas++;
+                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -69,11 +75,14 @@ public class MainActivity extends AppCompatActivity {
                     if (player[0] == 1){
                         casilla12.getImageView().setImageResource(R.drawable.dot);
                         casilla12.fill();
+                        casilla12.setPlayer(player[0]);
                     } else if (player[0] == 2){
                         casilla12.getImageView().setImageResource(R.drawable.cross);
                         casilla12.fill();
                     }
                     player[0] = setPlayer(player[0],tvPlayer);
+                    casillasOcupadas++;
+                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -89,11 +98,14 @@ public class MainActivity extends AppCompatActivity {
                     if (player[0] == 1){
                         casilla13.getImageView().setImageResource(R.drawable.dot);
                         casilla13.fill();
+                        casilla13.setPlayer(player[0]);
                     } else if (player[0] == 2){
                         casilla13.getImageView().setImageResource(R.drawable.cross);
                         casilla13.fill();
                     }
                     player[0] = setPlayer(player[0],tvPlayer);
+                    casillasOcupadas++;
+                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -109,11 +121,14 @@ public class MainActivity extends AppCompatActivity {
                     if (player[0] == 1){
                         casilla21.getImageView().setImageResource(R.drawable.dot);
                         casilla21.fill();
+                        casilla21.setPlayer(player[0]);
                     } else if (player[0] == 2){
                         casilla21.getImageView().setImageResource(R.drawable.cross);
                         casilla21.fill();
                     }
                     player[0] = setPlayer(player[0],tvPlayer);
+                    casillasOcupadas++;
+                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -125,15 +140,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Casilla casilla22 = tablero.getCasillaById(5);
                 if(casilla22.isEmpty()) {
-
                     if (player[0] == 1){
                         casilla22.getImageView().setImageResource(R.drawable.dot);
                         casilla22.fill();
+                        casilla22.setPlayer(player[0]);
                     } else if (player[0] == 2){
                         casilla22.getImageView().setImageResource(R.drawable.cross);
                         casilla22.fill();
                     }
                     player[0] = setPlayer(player[0],tvPlayer);
+                    casillasOcupadas++;
+                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -149,11 +166,14 @@ public class MainActivity extends AppCompatActivity {
                     if (player[0] == 1){
                         casilla23.getImageView().setImageResource(R.drawable.dot);
                         casilla23.fill();
+                        casilla23.setPlayer(player[0]);
                     } else if (player[0] == 2){
                         casilla23.getImageView().setImageResource(R.drawable.cross);
                         casilla23.fill();
                     }
                     player[0] = setPlayer(player[0],tvPlayer);
+                    casillasOcupadas++;
+                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -169,11 +189,14 @@ public class MainActivity extends AppCompatActivity {
                     if (player[0] == 1){
                         casilla31.getImageView().setImageResource(R.drawable.dot);
                         casilla31.fill();
+                        casilla31.setPlayer(player[0]);
                     } else if (player[0] == 2){
                         casilla31.getImageView().setImageResource(R.drawable.cross);
                         casilla31.fill();
                     }
                     player[0] = setPlayer(player[0],tvPlayer);
+                    casillasOcupadas++;
+                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -189,11 +212,14 @@ public class MainActivity extends AppCompatActivity {
                     if (player[0] == 1){
                         casilla32.getImageView().setImageResource(R.drawable.dot);
                         casilla32.fill();
+                        casilla32.setPlayer(player[0]);
                     } else if (player[0] == 2){
                         casilla32.getImageView().setImageResource(R.drawable.cross);
                         casilla32.fill();
                     }
                     player[0] = setPlayer(player[0],tvPlayer);
+                    casillasOcupadas++;
+                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -209,11 +235,14 @@ public class MainActivity extends AppCompatActivity {
                     if (player[0] == 1){
                         casilla33.getImageView().setImageResource(R.drawable.dot);
                         casilla33.fill();
+                        casilla33.setPlayer(player[0]);
                     } else if (player[0] == 2){
                         casilla33.getImageView().setImageResource(R.drawable.cross);
                         casilla33.fill();
                     }
                     player[0] = setPlayer(player[0],tvPlayer);
+                    casillasOcupadas++;
+                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -231,6 +260,12 @@ public class MainActivity extends AppCompatActivity {
             player--;
         }
         return player;
+    }
+
+    private void checkGameEnd(TextView tvPlayer) {
+        if(casillasOcupadas == 9) {
+            tvPlayer.setText(R.string.game_ended);
+        }
     }
 
 }
