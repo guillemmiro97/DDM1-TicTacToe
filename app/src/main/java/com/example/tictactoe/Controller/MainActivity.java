@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tvPlayer = findViewById(R.id.playerMessage);
         tvPlayer.setText(R.string.player_1);
 
-        //TODO: como sabemos que player está jugando y le metemos el dibujo
+        //TODO: Refactor del código para poner toda la logica en una función, pasando la casilla.
 
         r1c1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,6 +124,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Casilla casilla22 = tablero.getCasillaById(5);
+                if(casilla22.isEmpty()) {
+
+                    if (player[0] == 1){
+                        casilla22.getImageView().setImageResource(R.drawable.dot);
+                        casilla22.fill();
+                    } else if (player[0] == 2){
+                        casilla22.getImageView().setImageResource(R.drawable.cross);
+                        casilla22.fill();
+                    }
+                    player[0] = setPlayer(player[0],tvPlayer);
+                } else {
+                    Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -131,6 +144,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Casilla casilla23 = tablero.getCasillaById(6);
+                if(casilla23.isEmpty()) {
+
+                    if (player[0] == 1){
+                        casilla23.getImageView().setImageResource(R.drawable.dot);
+                        casilla23.fill();
+                    } else if (player[0] == 2){
+                        casilla23.getImageView().setImageResource(R.drawable.cross);
+                        casilla23.fill();
+                    }
+                    player[0] = setPlayer(player[0],tvPlayer);
+                } else {
+                    Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -138,6 +164,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Casilla casilla31 = tablero.getCasillaById(7);
+                if(casilla31.isEmpty()) {
+
+                    if (player[0] == 1){
+                        casilla31.getImageView().setImageResource(R.drawable.dot);
+                        casilla31.fill();
+                    } else if (player[0] == 2){
+                        casilla31.getImageView().setImageResource(R.drawable.cross);
+                        casilla31.fill();
+                    }
+                    player[0] = setPlayer(player[0],tvPlayer);
+                } else {
+                    Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -145,6 +184,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Casilla casilla32 = tablero.getCasillaById(8);
+                if(casilla32.isEmpty()) {
+
+                    if (player[0] == 1){
+                        casilla32.getImageView().setImageResource(R.drawable.dot);
+                        casilla32.fill();
+                    } else if (player[0] == 2){
+                        casilla32.getImageView().setImageResource(R.drawable.cross);
+                        casilla32.fill();
+                    }
+                    player[0] = setPlayer(player[0],tvPlayer);
+                } else {
+                    Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -152,6 +204,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Casilla casilla33 = tablero.getCasillaById(9);
+                if(casilla33.isEmpty()) {
+
+                    if (player[0] == 1){
+                        casilla33.getImageView().setImageResource(R.drawable.dot);
+                        casilla33.fill();
+                    } else if (player[0] == 2){
+                        casilla33.getImageView().setImageResource(R.drawable.cross);
+                        casilla33.fill();
+                    }
+                    player[0] = setPlayer(player[0],tvPlayer);
+                } else {
+                    Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
