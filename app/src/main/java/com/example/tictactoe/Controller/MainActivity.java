@@ -13,7 +13,7 @@ import com.example.tictactoe.Model.Tablero;
 import com.example.tictactoe.R;
 
 public class MainActivity extends AppCompatActivity {
-
+    final int[] player = {1};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView r3c2 = findViewById(R.id.r3c2);
         ImageView r3c3 = findViewById(R.id.r3c3);
 
-        final int[] player = {1};
+
 
 
         Tablero tablero = new Tablero(r1c1, r1c2, r1c3, r2c1, r2c2, r2c3, r3c1, r3c2, r3c3);
@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         tvPlayer.setText(R.string.player_1);
 
         //TODO: como sabemos que player está jugando y le metemos el dibujo
-        //@Fao Exemple amb el punt
 
         r1c1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,16 +59,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //@Fao Exemple amb la creu
 
         r1c2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Casilla casilla12 = tablero.getCasillaById(2);
-                player[0] = setPlayer(player[0],tvPlayer);
                 if(casilla12.isEmpty()) {
-                    casilla12.getImageView().setImageResource(R.drawable.cross);
-                    casilla12.fill();
+
+                    if (player[0] == 1){
+                        casilla12.getImageView().setImageResource(R.drawable.dot);
+                        casilla12.fill();
+                    } else if (player[0] == 2){
+                        casilla12.getImageView().setImageResource(R.drawable.cross);
+                        casilla12.fill();
+                    }
+                    player[0] = setPlayer(player[0],tvPlayer);
+                } else {
+                    Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -78,6 +84,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Casilla casilla13 = tablero.getCasillaById(3);
+                if(casilla13.isEmpty()) {
+
+                    if (player[0] == 1){
+                        casilla13.getImageView().setImageResource(R.drawable.dot);
+                        casilla13.fill();
+                    } else if (player[0] == 2){
+                        casilla13.getImageView().setImageResource(R.drawable.cross);
+                        casilla13.fill();
+                    }
+                    player[0] = setPlayer(player[0],tvPlayer);
+                } else {
+                    Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -85,6 +104,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Casilla casilla21 = tablero.getCasillaById(4);
+                if(casilla21.isEmpty()) {
+
+                    if (player[0] == 1){
+                        casilla21.getImageView().setImageResource(R.drawable.dot);
+                        casilla21.fill();
+                    } else if (player[0] == 2){
+                        casilla21.getImageView().setImageResource(R.drawable.cross);
+                        casilla21.fill();
+                    }
+                    player[0] = setPlayer(player[0],tvPlayer);
+                } else {
+                    Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
