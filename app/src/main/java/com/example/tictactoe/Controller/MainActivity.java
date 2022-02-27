@@ -47,27 +47,17 @@ public class MainActivity extends AppCompatActivity {
                 Casilla casilla11 = tablero.getCasillaById(1);
                 if(casilla11.isEmpty()) {
 
-                    if (player[0] == 1){
-                        casilla11.getImageView().setImageResource(R.drawable.dot);
-                        casilla11.fill();
-                        casilla11.setPlayer(player[0]);
-                        /*if (tablero.checkGameWon(player[0])) {
-                            Toast.makeText(getApplicationContext(),R.string.player1_win,Toast.LENGTH_SHORT).show();
-                        }*/
-                    } else if (player[0] == 2){
-                        casilla11.getImageView().setImageResource(R.drawable.cross);
-                        casilla11.fill();
-                        casilla11.setPlayer(player[0]);
-                        /*if (tablero.checkGameWon(player[0])) {
-                            Toast.makeText(getApplicationContext(),R.string.player2_win,Toast.LENGTH_SHORT).show();
-                        }*/
+                    setDrawableCasilla(player[0],casilla11);
+
+                    casilla11.fill();
+                    casilla11.setPlayer(player[0]);
+
+                    if (!checkGameWonByPlayer(player[0])){
+                        player[0] = setPlayer(player[0],tvPlayer);
+                        casillasOcupadas++;
+                        checkGameEnd(tvPlayer);
                     }
-                    checkGameWonByPlayer(player[0]);
 
-
-                    player[0] = setPlayer(player[0],tvPlayer);
-                    casillasOcupadas++;
-                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -81,28 +71,16 @@ public class MainActivity extends AppCompatActivity {
                 Casilla casilla12 = tablero.getCasillaById(2);
                 if(casilla12.isEmpty()) {
 
-                    if (player[0] == 1){
-                        casilla12.getImageView().setImageResource(R.drawable.dot);
-                        casilla12.fill();
-                        casilla12.setPlayer(player[0]);
-                        /*if (tablero.checkGameWon(player[0])) {
-                            tvPlayer.setText(R.string.game_ended);
-                            Toast.makeText(getApplicationContext(),R.string.player1_win,Toast.LENGTH_SHORT).show();
-                        }*/
-                    } else if (player[0] == 2){
-                        casilla12.getImageView().setImageResource(R.drawable.cross);
-                        casilla12.fill();
-                        casilla12.setPlayer(player[0]);
-                        /*if (tablero.checkGameWon(player[0])) {
-                            tvPlayer.setText(R.string.game_ended);
-                            Toast.makeText(getApplicationContext(),R.string.player2_win,Toast.LENGTH_SHORT).show();
-                        }*/
-                    }
-                    checkGameWonByPlayer(player[0]);
+                    setDrawableCasilla(player[0],casilla12);
 
-                    player[0] = setPlayer(player[0],tvPlayer);
-                    casillasOcupadas++;
-                    checkGameEnd(tvPlayer);
+                    casilla12.fill();
+                    casilla12.setPlayer(player[0]);
+
+                    if (!checkGameWonByPlayer(player[0])){
+                        player[0] = setPlayer(player[0],tvPlayer);
+                        casillasOcupadas++;
+                        checkGameEnd(tvPlayer);
+                    }
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -115,26 +93,16 @@ public class MainActivity extends AppCompatActivity {
                 Casilla casilla13 = tablero.getCasillaById(3);
                 if(casilla13.isEmpty()) {
 
-                    if (player[0] == 1){
-                        casilla13.getImageView().setImageResource(R.drawable.dot);
-                        casilla13.fill();
-                        casilla13.setPlayer(player[0]);
-                        /*if (tablero.checkGameWon(player[0])) {
-                            Toast.makeText(getApplicationContext(),R.string.player1_win,Toast.LENGTH_SHORT).show();
-                        }*/
-                    } else if (player[0] == 2){
-                        casilla13.getImageView().setImageResource(R.drawable.cross);
-                        casilla13.fill();
-                        casilla13.setPlayer(player[0]);
-                        /*if (tablero.checkGameWon(player[0])) {
-                            Toast.makeText(getApplicationContext(),R.string.player2_win,Toast.LENGTH_SHORT).show();
-                        }*/
-                    }
-                    checkGameWonByPlayer(player[0]);
+                    setDrawableCasilla(player[0],casilla13);
 
-                    player[0] = setPlayer(player[0],tvPlayer);
-                    casillasOcupadas++;
-                    checkGameEnd(tvPlayer);
+                    casilla13.fill();
+                    casilla13.setPlayer(player[0]);
+
+                    if (!checkGameWonByPlayer(player[0])){
+                        player[0] = setPlayer(player[0],tvPlayer);
+                        casillasOcupadas++;
+                        checkGameEnd(tvPlayer);
+                    }
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -147,17 +115,15 @@ public class MainActivity extends AppCompatActivity {
                 Casilla casilla21 = tablero.getCasillaById(4);
                 if(casilla21.isEmpty()) {
 
-                    if (player[0] == 1){
-                        casilla21.getImageView().setImageResource(R.drawable.dot);
-                        casilla21.fill();
-                        casilla21.setPlayer(player[0]);
-                    } else if (player[0] == 2){
-                        casilla21.getImageView().setImageResource(R.drawable.cross);
-                        casilla21.fill();
+                    setDrawableCasilla(player[0],casilla21);
+                    casilla21.fill();
+                    casilla21.setPlayer(player[0]);
+
+                    if (!checkGameWonByPlayer(player[0])){
+                        player[0] = setPlayer(player[0],tvPlayer);
+                        casillasOcupadas++;
+                        checkGameEnd(tvPlayer);
                     }
-                    player[0] = setPlayer(player[0],tvPlayer);
-                    casillasOcupadas++;
-                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -169,17 +135,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Casilla casilla22 = tablero.getCasillaById(5);
                 if(casilla22.isEmpty()) {
-                    if (player[0] == 1){
-                        casilla22.getImageView().setImageResource(R.drawable.dot);
-                        casilla22.fill();
-                        casilla22.setPlayer(player[0]);
-                    } else if (player[0] == 2){
-                        casilla22.getImageView().setImageResource(R.drawable.cross);
-                        casilla22.fill();
+
+                    setDrawableCasilla(player[0],casilla22);
+                    casilla22.fill();
+                    casilla22.setPlayer(player[0]);
+
+                    if (!checkGameWonByPlayer(player[0])){
+                        player[0] = setPlayer(player[0],tvPlayer);
+                        casillasOcupadas++;
+                        checkGameEnd(tvPlayer);
                     }
-                    player[0] = setPlayer(player[0],tvPlayer);
-                    casillasOcupadas++;
-                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -192,17 +157,15 @@ public class MainActivity extends AppCompatActivity {
                 Casilla casilla23 = tablero.getCasillaById(6);
                 if(casilla23.isEmpty()) {
 
-                    if (player[0] == 1){
-                        casilla23.getImageView().setImageResource(R.drawable.dot);
-                        casilla23.fill();
-                        casilla23.setPlayer(player[0]);
-                    } else if (player[0] == 2){
-                        casilla23.getImageView().setImageResource(R.drawable.cross);
-                        casilla23.fill();
+                    setDrawableCasilla(player[0],casilla23);
+                    casilla23.fill();
+                    casilla23.setPlayer(player[0]);
+
+                    if (!checkGameWonByPlayer(player[0])){
+                        player[0] = setPlayer(player[0],tvPlayer);
+                        casillasOcupadas++;
+                        checkGameEnd(tvPlayer);
                     }
-                    player[0] = setPlayer(player[0],tvPlayer);
-                    casillasOcupadas++;
-                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -215,17 +178,15 @@ public class MainActivity extends AppCompatActivity {
                 Casilla casilla31 = tablero.getCasillaById(7);
                 if(casilla31.isEmpty()) {
 
-                    if (player[0] == 1){
-                        casilla31.getImageView().setImageResource(R.drawable.dot);
-                        casilla31.fill();
-                        casilla31.setPlayer(player[0]);
-                    } else if (player[0] == 2){
-                        casilla31.getImageView().setImageResource(R.drawable.cross);
-                        casilla31.fill();
+                    setDrawableCasilla(player[0],casilla31);
+                    casilla31.fill();
+                    casilla31.setPlayer(player[0]);
+
+                    if (!checkGameWonByPlayer(player[0])){
+                        player[0] = setPlayer(player[0],tvPlayer);
+                        casillasOcupadas++;
+                        checkGameEnd(tvPlayer);
                     }
-                    player[0] = setPlayer(player[0],tvPlayer);
-                    casillasOcupadas++;
-                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -238,17 +199,15 @@ public class MainActivity extends AppCompatActivity {
                 Casilla casilla32 = tablero.getCasillaById(8);
                 if(casilla32.isEmpty()) {
 
-                    if (player[0] == 1){
-                        casilla32.getImageView().setImageResource(R.drawable.dot);
-                        casilla32.fill();
-                        casilla32.setPlayer(player[0]);
-                    } else if (player[0] == 2){
-                        casilla32.getImageView().setImageResource(R.drawable.cross);
-                        casilla32.fill();
+                    setDrawableCasilla(player[0],casilla32);
+                    casilla32.fill();
+                    casilla32.setPlayer(player[0]);
+
+                    if (!checkGameWonByPlayer(player[0])){
+                        player[0] = setPlayer(player[0],tvPlayer);
+                        casillasOcupadas++;
+                        checkGameEnd(tvPlayer);
                     }
-                    player[0] = setPlayer(player[0],tvPlayer);
-                    casillasOcupadas++;
-                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -261,17 +220,16 @@ public class MainActivity extends AppCompatActivity {
                 Casilla casilla33 = tablero.getCasillaById(9);
                 if(casilla33.isEmpty()) {
 
-                    if (player[0] == 1){
-                        casilla33.getImageView().setImageResource(R.drawable.dot);
-                        casilla33.fill();
-                        casilla33.setPlayer(player[0]);
-                    } else if (player[0] == 2){
-                        casilla33.getImageView().setImageResource(R.drawable.cross);
-                        casilla33.fill();
+                    setDrawableCasilla(player[0],casilla33);
+
+                    casilla33.fill();
+                    casilla33.setPlayer(player[0]);
+
+                    if (!checkGameWonByPlayer(player[0])){
+                        player[0] = setPlayer(player[0],tvPlayer);
+                        casillasOcupadas++;
+                        checkGameEnd(tvPlayer);
                     }
-                    player[0] = setPlayer(player[0],tvPlayer);
-                    casillasOcupadas++;
-                    checkGameEnd(tvPlayer);
                 } else {
                     Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
                 }
@@ -300,6 +258,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean checkGameWonByPlayer(int player){
         if (tablero.checkGameWon(player)) {
             tvPlayer.setText(R.string.game_ended);
+            gameWon = true;
             if (player == 1){
                 Toast.makeText(getApplicationContext(),R.string.player1_win,Toast.LENGTH_SHORT).show();
             } else if(player == 2){
@@ -308,6 +267,14 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+
+    private void setDrawableCasilla(int player, Casilla c){
+        if (player == 1){
+            c.getImageView().setImageResource(R.drawable.dot);
+        } else if (player == 2){
+            c.getImageView().setImageResource(R.drawable.cross);
+        }
     }
 
 }
