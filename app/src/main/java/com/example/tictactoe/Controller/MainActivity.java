@@ -45,21 +45,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Casilla casilla11 = tablero.getCasillaById(1);
-                if(casilla11.isEmpty()) {
+                if (!gameWon) {
+                    if (casilla11.isEmpty()) {
 
-                    setDrawableCasilla(player[0],casilla11);
+                        setDrawableCasilla(player[0], casilla11);
 
-                    casilla11.fill();
-                    casilla11.setPlayer(player[0]);
+                        casilla11.fill();
+                        casilla11.setPlayer(player[0]);
 
-                    if (!checkGameWonByPlayer(player[0])){
-                        player[0] = setPlayer(player[0],tvPlayer);
-                        casillasOcupadas++;
-                        checkGameEnd(tvPlayer);
+                        if (!checkGameWonByPlayer(player[0])) {
+                            player[0] = setPlayer(player[0], tvPlayer);
+                            casillasOcupadas++;
+                            checkGameEnd(tvPlayer);
+                        }
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), R.string.cell_full, Toast.LENGTH_SHORT).show();
                     }
-
                 } else {
-                    Toast.makeText(getApplicationContext(),R.string.cell_full,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.game_already_won, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -221,7 +225,6 @@ public class MainActivity extends AppCompatActivity {
                 if(casilla33.isEmpty()) {
 
                     setDrawableCasilla(player[0],casilla33);
-
                     casilla33.fill();
                     casilla33.setPlayer(player[0]);
 

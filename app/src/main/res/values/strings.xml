@@ -6,4 +6,5 @@
     <string name="game_ended">Game ended!</string>
     <string name="player1_win">Congratulations Player 1!</string>
     <string name="player2_win">Congratulations Player 2!</string>
+    <string name="game_already_won">Game already won, start new one!</string>
 </resources>
