@@ -5,4 +5,5 @@
     <string name="cell_full">Cell Full!</string>
     <string name="game_ended">Game ended!</string>
     <string name="player1_win">Congratulations Player 1!</string>
+    <string name="player2_win">Congratulations Player 2!</string>
 </resources>
